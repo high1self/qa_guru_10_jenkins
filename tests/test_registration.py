@@ -2,14 +2,12 @@ from datetime import date
 import allure
 from demoqa_tests.model.pages.practice_form import PracticePage
 from demoqa_tests.model.data.student import Student, Hobby
-from selene import browser
 
 practice_form = PracticePage()
 
 
 @allure.title("Successful fill form")
 def test_registration(setup_browser):
-    browser = setup_browser
     student = Student(
         first_name='Kirill',
         last_name='Kozhevnikov',

@@ -1,6 +1,5 @@
 from selene import have
-# from selene.support.shared import browser
-from selene import browser
+from selene.support.shared import browser
 from demoqa_tests.model.methods.checkbox import Checkbox
 from demoqa_tests.model.methods.datepicker import Datepicker
 from demoqa_tests.model.methods.dropdown import Dropdown
@@ -11,8 +10,6 @@ from tests.conftest import setup_browser
 
 
 class PracticePage:
-    browser = setup_browser
-
     def open(self):
         browser.open('/automation-practice-form')
         return self
