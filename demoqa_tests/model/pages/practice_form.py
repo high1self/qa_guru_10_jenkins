@@ -1,4 +1,4 @@
-from selene import have
+from selene import have, command
 from selene.support.shared import browser
 from demoqa_tests.model.methods.checkbox import Checkbox
 from demoqa_tests.model.methods.datepicker import Datepicker
@@ -66,8 +66,13 @@ class PracticePage:
         browser.element('#submit').press_enter()
         return self
 
+    def close_banner(self):
+        browser.element('#close-fixedban').perform(command.js.remove)
+        return self
+
     def fill(self, student):
         self.fill_name(student) \
+            .close_banner() \
             .fill_contacts(student) \
             .set_gender(student) \
             .input_birthday(student) \

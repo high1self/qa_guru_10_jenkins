@@ -1,5 +1,7 @@
-allure-results
+allure-results/
+tests/allure-results/
 .env
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
